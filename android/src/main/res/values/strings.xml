@@ -1,0 +1,8 @@
+<resources>
+    <string name="textSuccessAuth">Erfolgeich authentifiziert.</string>
+    <string name="textTouchSencor">Sensor berühren</string>
+    <string name="textCancel">Abbrechen</string>
+    <string name="textIsSupported">Wird unterstützt.</string>
+    <string name="textNotSupported">Nicht unterstützt.</string>
+    <string name="textNotRecognized">Bitte noch einmal versuchen.</string>
+</resources>

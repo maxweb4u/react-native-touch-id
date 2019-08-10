@@ -14,7 +14,7 @@ public class DialogResultHandler implements FingerprintDialog.DialogResultListen
     @Override
     public void onAuthenticated() {
       FingerprintAuthModule.inProgress = false;
-      successCallback.invoke("Successfully authenticated.");
+      successCallback.invoke("@string/textSuccessAuth");
     }
 
     @Override

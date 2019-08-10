@@ -64,7 +64,7 @@ public class FingerprintAuthModule extends ReactContextBaseJavaModule implements
             // (not just fingerprint) is actually supported
             reactSuccessCallback.invoke("Fingerprint");
         } else {
-            reactErrorCallback.invoke("Not supported.", result);
+            reactErrorCallback.invoke("@string/textNotSupported", result);
         }
     }
 
@@ -80,7 +80,7 @@ public class FingerprintAuthModule extends ReactContextBaseJavaModule implements
         int availableResult = isFingerprintAuthAvailable();
         if (availableResult != FingerprintAuthConstants.IS_SUPPORTED) {
             inProgress = false;
-            reactErrorCallback.invoke("Not supported", availableResult);
+            reactErrorCallback.invoke("@string/textNotSupported", availableResult);
             return;
         }
 
@@ -88,7 +88,7 @@ public class FingerprintAuthModule extends ReactContextBaseJavaModule implements
         final Cipher cipher = new FingerprintCipher().getCipher();
         if (cipher == null) {
             inProgress = false;
-            reactErrorCallback.invoke("Not supported", FingerprintAuthConstants.NOT_AVAILABLE);
+            reactErrorCallback.invoke("@string/textNotSupported", FingerprintAuthConstants.NOT_AVAILABLE);
             return;
         }
 
